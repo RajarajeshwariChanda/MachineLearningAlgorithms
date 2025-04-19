@@ -1,0 +1,4 @@
+Find Information gain of all attributes(Outlook,wind,humidity,temperature).
+For finding information gain of each attribute ,Eg. outlook calculate the entrophy of outlook and its sub types(sunny,overcast,rainy)
+Now subtract overall entrophy(outlook) from the weighted sum of its sub types(sunny,overcast,rainy)
+Whichever attribute has more gain make it root node and divide dataset according to their sub types to find the sub node under the sub types.
