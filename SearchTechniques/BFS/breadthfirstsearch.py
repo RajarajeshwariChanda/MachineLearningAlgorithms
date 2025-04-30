@@ -10,20 +10,27 @@ graph={
     "G": ["H","D"],
     "H": ["D","G"],
     "I": ["E"],
-    "J": ["E"],
+    "J": ["E"]
 }
 
 def main():
     print("entering the main function")
     node="S"
     outcome=bfs(graph,node)
+
 def bfs(graph,node):
     visited_node=set()
+    orderofbfs=list()
+    bfsqueue=collections.deque()
+    bfsqueue.append(node)
     print("entering the bfs function")
-    for checknodes in graph[node]:
-        if checknodes not in visited_node:
-            visited_node.add(checknodes)
-    print(visited_node)
+    while bfsqueue:
+        poppingnode=bfsqueue.popleft()
+        for checknodes in graph[node]:
+            if poppingnode not in visited_node:
+                visited_node.add(checknodes)
+        print(visited_node)
+    
             
 
 if __name__ == "__main__":
