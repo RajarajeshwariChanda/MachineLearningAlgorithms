@@ -15,9 +15,12 @@ graph={
 
 def main():
     print("entering the main function")
-    outcome=bfs()
-def bfs():
+    node="S"
+    outcome=bfs(graph,node)
+def bfs(graph,node):
     print("entering the bfs function")
+    for checknodes in graph[node]:
+        print(checknodes)
 
 if __name__ == "__main__":
     main()
