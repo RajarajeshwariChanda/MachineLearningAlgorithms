@@ -18,9 +18,13 @@ def main():
     node="S"
     outcome=bfs(graph,node)
 def bfs(graph,node):
+    visited_node=set()
     print("entering the bfs function")
     for checknodes in graph[node]:
-        print(checknodes)
+        if checknodes not in visited_node:
+            visited_node.add(checknodes)
+    print(visited_node)
+            
 
 if __name__ == "__main__":
     main()
