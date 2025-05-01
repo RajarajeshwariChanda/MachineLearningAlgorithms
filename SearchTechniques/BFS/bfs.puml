@@ -1,0 +1,19 @@
+@startuml
+title Breadth-First Search (BFS) Algorithm
+start
+if (node is not visited) then (yes)
+  :Mark node as visited;
+  :Enqueue node into queue;
+  while (queue is not empty)
+    :Dequeue node from queue;
+    :Get neighbors of node;
+    if (neighbor is not visited) then (yes)
+      :Mark neighbor as visited;
+      :Enqueue neighbor into queue;
+    endif
+  endwhile
+else (no)
+  :Backtrack;
+endif
+stop
+@enduml
