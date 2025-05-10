@@ -1,0 +1,19 @@
+@startuml
+title Depth-First Search (DFS) Algorithm
+start
+if (node is not visited) then (yes)
+  :Mark node as visited;
+  :Push node onto stack;
+  while (stack is not empty)
+    :Pop node from stack;
+    :Get neighbors of node;
+    if (neighbor is not visited) then (yes)
+      :Mark neighbor as visited;
+      :Push neighbor onto stack;
+    endif
+  endwhile
+else (no)
+  :Backtrack;
+endif
+stop
+@enduml
